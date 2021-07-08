@@ -1,0 +1,52 @@
+<!--
+    폼 요소는 서버에 데이터를 전달하기 위한 요소이며 <input>은 대표적인 폼 요소이다.
+    <input>은 내용이 없는 빕 요소 이며 type 속성을 통해 여러 종류의 입력 앵식으로 나타나게 된다.
+    
+    type="text"
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="EUC-KR">
+    </head>
+    <body>
+        <input type="text" placeholder="ㅇㅇㅇ">
+        <!-- 
+            주로 아이디, 이름, 주소, 전화번호 등 단순한 텍스트를 입력할 때 사용한다.
+            type="text"에는 placeholder 속성이 존재한다.
+            여기서 placeholder란?
+            만약 기본값이 아니라, 무엇을 입력해야 하는지 안내하는 문구를 넣고 싶다면 placeholder를 사용한다.
+            화면 상에는 그 문자열이 아니라, 버튼을 클릭했을 때 아무 값도 전송되지 않는다.
+        -->
+        <br>
+        
+        <input type="password">
+        <!--
+            암호와 같이 공개할 수 없는 내용을 입력할 때 사용을한다.
+            화면에는 type="text"와 같게 나타나지만 실제로 입력할 때 값을 노출하지 않는다.
+        -->
+        <br>
+        
+        <input type="radio" name="gender" checked="true">남자
+        <input type="radio" name="gender">여자
+        <!--
+            라디오 버튼을 만들 때 사용한다.
+            라디오 버튼은 중복 선택이 불가능하며 하나의 항목만을 선택을 해야한다.
+            checked 속성이란?
+            값이 별도로 존재하지 않는 boolean 속성이다.
+            boolean 속성은 true/false 둘 중 하나의 값을 가지며 속성이 존재하며 true, 속성이 존재하지 않으면 false이다.
+            name 속성은 라디오 버튼과 체크박스를 그룹화 시켜주는 속서이다.
+        -->
+        <br>
+
+        <input type="checkbox" name="hobby">등산
+        <input type="checkbox" name="hobby">독서
+        <input type="checkbox" name="hobby">운동
+        <!--
+            체크박스를 만들 때 사용한다.
+            체크박스는 중복 선택이 가능하다.
+        -->
+
+
+    </body>
+</html>
