@@ -1,0 +1,59 @@
+<!--
+    LABEL 요소
+    폼 컨트롤과 연결 시켜주기 위함으로 웹 접근성 향상에 도움된다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="EUC-KR">
+    </head>
+    <body>
+        <form action="./result.html" method="get">
+            <fieldset>
+                <label for="userid">이름</label>: <input type="text" id="userid" placeholder="ㅇㅇㅇ"><br>
+                <label for="userpw">비밀번호</label> : <input type="password" id="userpw"><br>
+                성별 : <label for="male">남자</label> <input type="radio" name="gender" id="male" checked>, 
+                <label for="female">여자</label> <input type="radio" name="gender" id="female"><br>     
+            </fieldset>
+            <fieldset>
+                취미 : <label for="movie">영화 감상</label> <input type="checkbox" name="hobbys" id="movie">,
+                <label for="music">음악 감상</label> <input type="checkbox" name="hobbys" id="music">
+                <label for="book">독서</label> <input type="checkbox" name="hobbys" id="book"><br>
+                <label for="file">프로필 사진 업로드</label>: <input type="file" id="file"><br>
+                사는 지역 : <select>
+                    <option >서울</option>
+                    <option >경기</option>
+                    <option>강원</option>
+                </select><br>
+                <label for="aboutme">자기소게 </label> : <textarea cols="30" row="5" placeholder="자기소개는 짧게 해주세요" id="aboutme"></textarea><br>            
+            </fieldset>
+            <input type="submit" value="전송"><br> 
+            <input type="reset" value="취소">           
+        </form>
+        <!-- 
+            <label>
+                <label>은 form 요소의 이름과 form 요소를 명시적으로 연결시켜주기 위해 사용한다.
+                모든 form 요소에서 사용을 할 수 있다.
+                form 요소의 id 속성값과 <label>의 for 속성값을 같게 적어줘야 한다.
+                <label>을 사용하면 이를 클릭했을 경우 해당 form 요소를 클릭한 것처럼 동작을 한다.        
+            
+            <fieldset>,<legend>
+                <field>,<legend>는 form 요소를 구조화 하기 위해 필요한 태그이다.
+                    - <field> : 여러 개의 폼 요소를 그룹화 하여 구조적으로 만들기 위해 사용
+                    - <legend> : 폼 요소의 제목으로 <fieldset> 내부에 작성
+                <fieldset>은 보통 form의 성격에 따라 구분을 한다.
+                <legend>는 <fieldset>의 자식으로 반드시 최상단에 위치해야 한다.
+            
+            <form>
+                <form>은 form 요소들을 감싸는 태그로 데이터를 묶어서 실제 서버로 전송해주는 역할을 하는 태그이다.
+                만약 <field>으로 구조화 되어있다면 <fieldset>도 함께 감싸는 역할을 한다.
+                <form>에는 대표적인 2가지 역할이 있다.
+                    - action : 데이터를 처리하기 위한 서버의 주소
+                    - method : 데이터를 전송하는 방식을 지정
+                method 속성 값에는 get/post 2가지 방식이 존재한다.
+                get 방식은 데이터가 전송될 때 주소창에 파라미터 형태로 붙어 데이터가 노출된다.
+                반면, post 방식은 데이터가 전송될 때 데이터가 노출되지 않는다.    
+        -->  
+    </body>
+</html>
